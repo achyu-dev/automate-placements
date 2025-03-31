@@ -119,9 +119,6 @@ function GeminiModelInference(subject, body) {
   const response = UrlFetchApp.fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey, {
     method: "POST",
     contentType: "application/json",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-    },
     payload: JSON.stringify({
       model: "gemini-1.0",
       prompt: prompt,
